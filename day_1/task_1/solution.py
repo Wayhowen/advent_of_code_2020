@@ -4,7 +4,8 @@ class Solver:
         self.kwargs = kwargs
 
     def solve(self):
-        output = self.find_two_expenses_summing_to(self.task_input, self.kwargs['summing_to'])
+        expenses = [int(num) for num in self.task_input]
+        output = self.find_two_expenses_summing_to(expenses, self.kwargs['summing_to'])
         return output
 
     def find_two_expenses_summing_to(self, expenses, summing_to):
