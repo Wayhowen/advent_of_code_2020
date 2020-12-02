@@ -2,6 +2,7 @@ from utils import FileReader
 from day_1.task_1.solution import Solver as Task1Day1Solver
 from day_1.task_2.solution import Solver as Task2Day1Solver
 from day_2.task_1.solution import Solver as Task1Day2Solver
+from day_2.task_2.solution import Solver as Task2Day2Solver
 
 
 def main():
@@ -21,6 +22,11 @@ def main():
     task1_day2_solver = Task1Day2Solver(rules_1)
     task1_day2_answer = task1_day2_solver.solve()
     print(task1_day2_answer)
+
+    rules_2 = reader.read_file("day_2/task_2/input.txt")
+    task2_day2_solver = Task2Day2Solver(rules_2)
+    task2_day2_answer = task2_day2_solver.solve()
+    print(task2_day2_answer)
 
 
 if __name__ == "__main__":
