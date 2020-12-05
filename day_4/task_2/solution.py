@@ -1,6 +1,6 @@
 import re
 
-
+# TODO: change to regexes
 class Solver:
     def __init__(self, task_input, **kwargs):
         self.task_input = task_input
@@ -23,7 +23,6 @@ class Solver:
                 for data in line_data:
                     temp_passport[data.split(":")[0]] = data.split(":")[1]
             elif line == "":
-                print(iteration, len(unprocessed_data) - 1)
                 passport_data.append(temp_passport)
                 temp_passport = {}
             if iteration == (len(unprocessed_data) - 1):
@@ -42,8 +41,6 @@ class Passport:
             if field in self.passport_data:
                 method = getattr(self, f"_{field}_rule")
                 result = method(self.passport_data[field])
-                if result is False:
-                    print(field, self.passport_data[field])
                 if result is False:
                     return result
             else:
