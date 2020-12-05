@@ -8,6 +8,7 @@ from day_3.task_2.solution import Solver as Task2Day3Solver
 from day_4.task_1.solution import Solver as Task1Day4Solver
 from day_4.task_2.solution import Solver as Task2Day4Solver
 from day_5.task_1.solution import Solver as Task1Day5Solver
+from day_5.task_2.solution import Solver as Task2Day5Solver
 
 
 def main():
@@ -57,6 +58,11 @@ def main():
     task1_day5_solver = Task1Day5Solver(seats_1)
     task1_day5_answer = task1_day5_solver.solve()
     print("t1d5: ", task1_day5_answer)
+
+    seats_2 = reader.read_file("day_5/task_2/input.txt")
+    task2_day5_solver = Task2Day5Solver(seats_2)
+    task2_day5_answer = task2_day5_solver.solve()
+    print("t2d5: ", task2_day5_answer)
 
 if __name__ == "__main__":
     main()
