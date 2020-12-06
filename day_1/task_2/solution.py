@@ -1,11 +1,10 @@
 class Solver:
-    def __init__(self, task_input, **kwargs):
+    def __init__(self, task_input):
         self.task_input = task_input
-        self.kwargs = kwargs
 
     def solve(self):
         expenses = [int(num) for num in self.task_input]
-        output = self.find_three_expenses_summing_to(expenses, self.kwargs['summing_to'])
+        output = self.find_three_expenses_summing_to(expenses, summing_to=2020)
         return output
 
     def find_three_expenses_summing_to(self, expenses, summing_to):
