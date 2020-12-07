@@ -11,7 +11,7 @@ def main():
     for day in range(1, DAYS + 1):
         for task in range(1, TASKS + 1):
             try:
-                task_input = reader.read_file(f"day_{day}/task_{task}/input.txt")
+                task_input = reader.read_file(f"day_{day}/input.txt")
                 module = importlib.import_module(f"day_{day}.task_{task}.solution")
                 solver = getattr(module, "Solver")(task_input)
                 answer = solver.solve()

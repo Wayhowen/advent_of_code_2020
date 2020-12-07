@@ -20,7 +20,6 @@ class Solver:
             if bag == bag_name:
                 for inner_bag, amount in inner_bags.items():
                     overall_amount += int(amount) * self._find_how_many_inside(inner_bag, rules)
-                    print(inner_bag, overall_amount)
         return overall_amount
 
 
