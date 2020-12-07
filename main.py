@@ -2,7 +2,7 @@ import importlib
 
 from utils import FileReader
 
-DAYS = 6
+DAYS = 7
 TASKS = 2
 
 
