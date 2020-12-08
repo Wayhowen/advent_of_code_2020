@@ -2,7 +2,7 @@ import importlib
 
 from utils import FileReader
 
-DAYS = 7
+DAYS = 8
 TASKS = 2
 
 
@@ -15,7 +15,7 @@ def main():
                 module = importlib.import_module(f"day_{day}.task_{task}.solution")
                 solver = getattr(module, "Solver")(task_input)
                 answer = solver.solve()
-                print(f"t{task}d{day}: ", answer)
+                print(f"t{task}d{day}:", answer)
             except (FileNotFoundError, ModuleNotFoundError) as e:
                 print(e)
                 pass
